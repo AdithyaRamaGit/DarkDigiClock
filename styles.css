@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-image: linear-gradient(45deg, black, rgb(25, 25, 25));
+}
+
+.main-div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+span {
+    font-family: "Tektur", sans-serif;
+    font-size: 8rem;
+    text-shadow: 0px 0px 10px white;
+    transition: all 0.3s ease-in-out;
+}
+
+
+#Am_Pm {
+    font-size: 2rem;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0px 0px 10px white;
+    }
+
+    50% {
+        text-shadow: 0px 0px 20px black;
+    }
+}
+
+span {
+    animation: glow 2s infinite;
+}
+
+
+@media (max-width: 576px) {
+    span {
+        font-size: 4rem;
+    }
+
+    #Am_Pm {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    span {
+        font-size: 8rem;
+    }
+
+    #Am_Pm {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    span {
+        font-size: 14rem;
+    }
+
+    #Am_Pm {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 993px) {
+    span {
+        font-size: 17rem;
+    }
+
+    #Am_Pm {
+        font-size: 2rem;
+    }
+}
